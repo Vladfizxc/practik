@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Самокат GO</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#home">GO <b>самокатGO</b></a>
+      <button id="toggle">☰</button>
+      <nav id="nav">
+        <a href="#how">Как это работает</a>
+        <a href="#models">Самокаты</a>
+        <a href="#prices">Тарифы</a>
+        <a href="#rules">Правила</a>
+        <a href="#rent">Аренда</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div>
+          <small>ГОРОДСКАЯ МОБИЛЬНОСТЬ</small>
+          <h1>Город ближе,<br><em>когда ты на GO.</em></h1>
+          <p>Удобный способ передвигаться по городу. Выбирай электросамокат, знакомься с тарифами и оставляй заявку.</p>
+          <a class="btn" href="#rent">Выбрать самокат →</a>
+        </div>
+        <div class="art">
+            <img src="загруженное.png"  alt="Электросамокат" style="width: 300px; height: auto; vertical-align: middle; margin-right: 170px;">
+        </div>
+      </section>
+
+      <section id="how">
+        <small>ПРОСТО И ПОНЯТНО</small>
+        <h2>Как это работает</h2>
+        <div class="grid">
+          <article> 
+            <b>01</b>
+            <h3>Выбери самокат</h3>
+            <p>Посмотри модели и выбери подходящий вариант.</p>
+          </article>
+          <article>
+            <b>02</b>
+            <h3>Оставь заявку</h3>
+            <p>Укажи контакты и желаемые условия аренды.</p>
+          </article>
+          <article>
+            <b>03</b>
+            <h3>Согласуй поездку</h3>
+            <p>Сотрудник сможет уточнить детали в реальном сервисе.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="models" class="pale">
+        <small>ВЫБИРАЙ СВОЙ МАРШРУТ</small>
+        <h2>Наши самокаты</h2>
+        <div class="grid">
+          <article>
+            <div class="product">GO / CITY</div>
+            <h3>City Lite</h3>
+            <p>Для коротких поездок. До 20 км/ч, запас хода до 20 км.</p>
+            <button class="pick" data-model="City Lite">Выбрать модель →</button>
+          </article>
+          <article>
+            <div class="product">GO / COMFORT</div>
+            <h3>Comfort</h3>
+            <p>Универсальный вариант. До 25 км/ч, запас хода до 25 км.</p>
+            <button class="pick" data-model="Comfort">Выбрать модель →</button>
+          </article>
+          <article>
+            <div class="product">GO / PLUS</div>
+            <h3>Plus</h3>
+            <p>Для более долгих маршрутов. Запас хода до 30 км.</p>
+            <button class="pick" data-model="Plus">Выбрать модель →</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="prices">
+        <small>ПРОЗРАЧНЫЕ УСЛОВИЯ</small>
+        <h2>Тарифы</h2>
+        <div class="grid">
+          <article>
+            <h3>Поминутный</h3>
+            <h2>5 ₽ <small>/ мин</small></h2>
+            <p>Для коротких поездок.</p>
+            <button class="picktariff" data-tariff="Поминутный">Выбрать</button>
+          </article>
+          <article class="featured">
+            <h3>На 30 минут</h3>
+            <h2>120 ₽</h2>
+            <p>Для прогулки по городу.</p>
+            <button class="picktariff" data-tariff="На 30 минут">Выбрать</button>
+          </article>
+          <article>
+            <h3>На 1 час</h3>
+            <h2>200 ₽</h2>
+            <p>Для маршрута с остановками.</p>
+            <button class="picktariff" data-tariff="На 1 час">Выбрать</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="rules" class="pale">
+        <small>БЕЗОПАСНОСТЬ ВАЖНЕЕ СКОРОСТИ</small>
+        <h2>Правила аренды</h2>
+        <div class="grid">
+          <article>
+            <h3>Проверь самокат</h3>
+            <p>Перед поездкой осмотри корпус, колёса и тормоза.</p>
+          </article>
+          <article>
+            <h3>Соблюдай правила</h3>
+            <p>Учитывай дорожную обстановку и действующие ПДД.</p>
+          </article>
+          <article>
+            <h3>Береги технику</h3>
+            <p>Используй самокат аккуратно и паркуй в разрешённых местах.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="rent">
+        <small>ТВОЯ ПОЕЗДКА НАЧИНАЕТСЯ ЗДЕСЬ</small>
+        <h2>Заявка на аренду</h2>
+        <form id="form">
+          <label>
+            Имя *
+            <input id="name" required minlength="2">
+          </label>
+          <label>
+            Телефон *
+            <input id="phone" type="tel" required placeholder="+7 ...">
+          </label>
+          <label>
+            Модель *
+            <select id="model" required>
+              <option value="">Выберите</option>
+              <option>City Lite</option>
+              <option>Comfort</option>
+              <option>Plus</option>
+            </select>
+          </label>
+          <label>
+            Тариф *
+            <select id="tariff" required>
+              <option value="">Выберите</option>
+              <option>Поминутный</option>
+              <option>На 30 минут</option>
+              <option>На 1 час</option>
+            </select>
+          </label>
+          <label>
+            Дата
+            <input type="date" id="date">
+          </label>
+          <label class="check">
+            <input type="checkbox" id="agree"> Согласен(на) на обработку данных.
+          </label>
+          <button class="btn" type="submit">Проверить заявку →</button>
+          <p id="result" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <b>GO самокат GO</b>
+      <p>hello@samokat-go.example · Учебный проект, 2026</p>
+      <p>© 2026 Самокат GO. Реальная аренда не предоставляется.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
